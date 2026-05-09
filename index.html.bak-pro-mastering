@@ -14,7 +14,7 @@
           <span class="status-pill" id="appStatus">待機中</span>
         </div>
         <h1>Suno Mastering Bench</h1>
-        <p class="lead">AI音源を読み込み、解析ベースのプロ風プリセットで配信向けに仕上げるマスタリング作業台。</p>
+        <p class="lead">AI音源を読み込み、基本補正から好みの仕上げまで耳で決めるマスタリング作業台。</p>
       </section>
 
       <section class="import-band" aria-label="音源読み込み">
@@ -70,7 +70,6 @@
           </div>
         </div>
         <div class="signal-row" id="signalFlags"></div>
-        <div class="signal-row mastering-coach" id="masteringCoach" aria-live="polite">音源を読み込むと、曲に合わせた自動補正の内容を表示します。</div>
       </section>
 
       <section class="controls-band" aria-label="マスタリング設定">
@@ -87,20 +86,20 @@
 
         <div class="preset-panel" aria-label="仕上げプリセット">
           <div class="preset-strip" aria-label="プリセット">
-            <button data-preset="balanced" type="button" disabled>Clean配信</button>
-            <button data-preset="aiClean" type="button" disabled>AI Rescue</button>
+            <button data-preset="balanced" type="button" disabled>配信標準</button>
+            <button data-preset="aiClean" type="button" disabled>AIザラつき抑え</button>
             <button data-preset="vocalForward" type="button" disabled>歌を前に</button>
-            <button data-preset="warm" type="button" disabled>Warm Ballad</button>
-            <button data-preset="bright" type="button" disabled>Bright Pop</button>
-            <button data-preset="soft" type="button" disabled>Soft Gentle</button>
-            <button data-preset="loud" type="button" disabled>Loud Modern</button>
-            <button data-preset="wide" type="button" disabled>Wide Cinematic</button>
-            <button data-preset="bassRich" type="button" disabled>Bass Rich</button>
-            <button data-preset="thinFix" type="button" disabled>Thin Fix</button>
-            <button data-preset="punch" type="button" disabled>Punchy Rock</button>
-            <button data-preset="night" type="button" disabled>Night Safe</button>
-            <button data-preset="sns" type="button" disabled>Loud SNS</button>
-            <button data-preset="natural" type="button" disabled>Natural</button>
+            <button data-preset="warm" type="button" disabled>あたたかい</button>
+            <button data-preset="bright" type="button" disabled>明るく抜ける</button>
+            <button data-preset="soft" type="button" disabled>耳に優しい</button>
+            <button data-preset="loud" type="button" disabled>音圧強め</button>
+            <button data-preset="wide" type="button" disabled>広がり</button>
+            <button data-preset="bassRich" type="button" disabled>低域太め</button>
+            <button data-preset="thinFix" type="button" disabled>薄さ補正</button>
+            <button data-preset="punch" type="button" disabled>迫力</button>
+            <button data-preset="night" type="button" disabled>夜に聴ける</button>
+            <button data-preset="sns" type="button" disabled>SNS映え</button>
+            <button data-preset="natural" type="button" disabled>控えめ自然</button>
           </div>
         </div>
 

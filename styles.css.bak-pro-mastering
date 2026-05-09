@@ -710,24 +710,3 @@ h2 {
     font-size: 2.08rem;
   }
 }
-
-/* PRO_MASTERING_UPGRADE_V1 */
-.mastering-coach {
-  align-items: flex-start;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.28rem;
-  line-height: 1.45;
-  margin-top: 0.8rem;
-  padding: 0.85rem 1rem;
-}
-
-.mastering-coach strong {
-  font-size: 0.95rem;
-}
-
-.mastering-coach span {
-  opacity: 0.86;
-}
