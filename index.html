@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Suno Mastering Bench</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="top-band">
+        <div class="brand-line">
+          <span class="product-mark">SMB</span>
+          <span class="status-pill" id="appStatus">待機中</span>
+        </div>
+        <h1>Suno Mastering Bench</h1>
+        <p class="lead">AI音源を読み込み、基本補正から好みの仕上げまで耳で決めるマスタリング作業台。</p>
+      </section>
+
+      <section class="import-band" aria-label="音源読み込み">
+        <label class="drop-zone" id="dropZone">
+          <input id="fileInput" type="file" accept="audio/*,.wav,.mp3,.flac">
+          <span class="drop-title">音源を読み込む</span>
+          <span class="drop-meta">WAV / MP3 / FLAC</span>
+        </label>
+        <div class="file-summary" id="fileSummary">
+          <span>未読み込み</span>
+          <strong>--:--</strong>
+          <em id="fileWarning" hidden></em>
+        </div>
+      </section>
+
+      <section class="transport-band" aria-label="再生と波形">
+        <div class="process-banner" id="processBanner" role="status" aria-live="polite" hidden>
+          <span id="processMessage">処理中</span>
+        </div>
+        <canvas id="waveformCanvas" class="waveform" width="1200" height="300"></canvas>
+        <div class="transport-row">
+          <button class="primary-button" id="playPause" type="button" disabled>再生</button>
+          <button class="icon-button" id="stopPlayback" type="button" disabled aria-label="停止" title="停止">■</button>
+          <div class="segmented-control" aria-label="比較対象">
+            <button id="beforeMode" class="is-active" type="button" disabled>Before</button>
+            <button id="afterMode" type="button" disabled>After</button>
+          </div>
+          <label class="toggle-line">
+            <input id="levelMatch" type="checkbox" checked disabled>
+            <span>音量マッチ</span>
+          </label>
+          <span class="time-readout" id="timeReadout">00:00 / 00:00</span>
+        </div>
+      </section>
+
+      <section class="meter-band" aria-label="メーター">
+        <div class="meter-grid">
+          <div class="meter-cell">
+            <span>LUFS</span>
+            <strong id="lufsValue">--</strong>
+          </div>
+          <div class="meter-cell">
+            <span>Peak</span>
+            <strong id="peakValue">--</strong>
+          </div>
+          <div class="meter-cell">
+            <span>True Peak</span>
+            <strong id="truePeakValue">--</strong>
+          </div>
+          <div class="meter-cell">
+            <span>Stereo</span>
+            <strong id="stereoValue">--</strong>
+          </div>
+        </div>
+        <div class="signal-row" id="signalFlags"></div>
+      </section>
+
+      <section class="controls-band" aria-label="マスタリング設定">
+        <div class="control-heading">
+          <div>
+            <p class="kicker">Step 1</p>
+            <h2>仕上げプリセット</h2>
+          </div>
+          <label class="switch">
+            <input id="baseClean" type="checkbox" checked disabled>
+            <span>On</span>
+          </label>
+        </div>
+
+        <div class="preset-panel" aria-label="仕上げプリセット">
+          <div class="preset-strip" aria-label="プリセット">
+            <button data-preset="balanced" type="button" disabled>配信標準</button>
+            <button data-preset="aiClean" type="button" disabled>AIザラつき抑え</button>
+            <button data-preset="vocalForward" type="button" disabled>歌を前に</button>
+            <button data-preset="warm" type="button" disabled>あたたかい</button>
+            <button data-preset="bright" type="button" disabled>明るく抜ける</button>
+            <button data-preset="soft" type="button" disabled>耳に優しい</button>
+            <button data-preset="loud" type="button" disabled>音圧強め</button>
+            <button data-preset="wide" type="button" disabled>広がり</button>
+            <button data-preset="bassRich" type="button" disabled>低域太め</button>
+            <button data-preset="thinFix" type="button" disabled>薄さ補正</button>
+            <button data-preset="punch" type="button" disabled>迫力</button>
+            <button data-preset="night" type="button" disabled>夜に聴ける</button>
+            <button data-preset="sns" type="button" disabled>SNS映え</button>
+            <button data-preset="natural" type="button" disabled>控えめ自然</button>
+          </div>
+        </div>
+
+        <div class="base-param-panel" aria-label="基本補正パラメータ">
+          <div class="base-param-heading">
+            <span class="group-label">基本補正パラメータ</span>
+            <button class="ghost-button small-button" id="resetBaseControls" type="button" disabled>標準</button>
+          </div>
+          <div class="base-slider-grid">
+            <label class="slider-line">
+              <span>超低域カット</span>
+              <input id="baseLowCutHz" type="range" min="18" max="45" step="1" value="26" disabled>
+              <output id="baseLowCutHzValue">26Hz</output>
+            </label>
+            <label class="slider-line">
+              <span>濁り帯域</span>
+              <input id="baseMudHz" type="range" min="160" max="320" step="5" value="230" disabled>
+              <output id="baseMudHzValue">230Hz</output>
+            </label>
+            <label class="slider-line">
+              <span>濁りカット</span>
+              <input id="baseMudDb" type="range" min="0" max="3" step="0.1" value="0.9" disabled>
+              <output id="baseMudDbValue">-0.9dB</output>
+            </label>
+            <label class="slider-line">
+              <span>刺さり帯域</span>
+              <input id="baseHarshHz" type="range" min="2500" max="5200" step="50" value="3600" disabled>
+              <output id="baseHarshHzValue">3.6kHz</output>
+            </label>
+            <label class="slider-line">
+              <span>刺さり抑制</span>
+              <input id="baseHarshDb" type="range" min="0" max="3" step="0.1" value="0.7" disabled>
+              <output id="baseHarshDbValue">-0.7dB</output>
+            </label>
+            <label class="slider-line">
+              <span>ザラつき抑制</span>
+              <input id="baseArtifactAmount" type="range" min="0" max="100" step="1" value="18" disabled>
+              <output id="baseArtifactAmountValue">18%</output>
+            </label>
+            <label class="slider-line">
+              <span>低域センター</span>
+              <input id="baseLowMonoHz" type="range" min="80" max="190" step="5" value="145" disabled>
+              <output id="baseLowMonoHzValue">145Hz</output>
+            </label>
+            <label class="slider-line">
+              <span>センター量</span>
+              <input id="baseLowMonoAmount" type="range" min="0" max="100" step="1" value="95" disabled>
+              <output id="baseLowMonoAmountValue">95%</output>
+            </label>
+          </div>
+        </div>
+
+        <div class="target-row">
+          <span class="group-label">目標音量</span>
+          <div class="segmented-control wide" aria-label="目標音量">
+            <button class="target-button" data-target="natural" type="button" disabled>Natural</button>
+            <button class="target-button is-active" data-target="streaming" type="button" disabled>Streaming</button>
+            <button class="target-button" data-target="loud" type="button" disabled>Loud</button>
+          </div>
+        </div>
+
+        <div class="control-heading tone-heading">
+          <div>
+            <p class="kicker">Step 2</p>
+            <h2>好み調整</h2>
+          </div>
+          <button class="ghost-button" id="resetControls" type="button" disabled>リセット</button>
+        </div>
+
+        <div class="slider-grid">
+          <label class="slider-line">
+            <span>明るさ</span>
+            <input id="brightness" type="range" min="-100" max="100" value="0" disabled>
+            <output id="brightnessValue">0</output>
+          </label>
+          <label class="slider-line">
+            <span>太さ</span>
+            <input id="body" type="range" min="-100" max="100" value="0" disabled>
+            <output id="bodyValue">0</output>
+          </label>
+          <label class="slider-line">
+            <span>迫力</span>
+            <input id="impact" type="range" min="-100" max="100" value="0" disabled>
+            <output id="impactValue">0</output>
+          </label>
+          <label class="slider-line">
+            <span>広がり</span>
+            <input id="width" type="range" min="-100" max="100" value="0" disabled>
+            <output id="widthValue">0</output>
+          </label>
+          <label class="slider-line">
+            <span>なめらかさ</span>
+            <input id="smoothness" type="range" min="-100" max="100" value="0" disabled>
+            <output id="smoothnessValue">0</output>
+          </label>
+        </div>
+      </section>
+
+      <section class="analysis-band" aria-label="スペクトラムと詳細">
+        <div class="spectrum-wrap">
+          <canvas id="spectrumCanvas" class="spectrum" width="1200" height="240"></canvas>
+        </div>
+        <details class="details-panel">
+          <summary>詳細メーター</summary>
+          <dl class="detail-grid">
+            <div>
+              <dt>Before LUFS</dt>
+              <dd id="beforeLufs">--</dd>
+            </div>
+            <div>
+              <dt>After LUFS</dt>
+              <dd id="afterLufs">--</dd>
+            </div>
+            <div>
+              <dt>Short-term</dt>
+              <dd id="shortTermLufs">--</dd>
+            </div>
+            <div>
+              <dt>Crest</dt>
+              <dd id="crestValue">--</dd>
+            </div>
+          </dl>
+        </details>
+
+        <div class="backend-panel" aria-label="精密エンジン">
+          <div class="backend-heading">
+            <div>
+              <p class="kicker">Optional</p>
+              <h2>精密エンジン</h2>
+            </div>
+            <span class="status-pill" id="backendStatus">確認中</span>
+          </div>
+          <div class="backend-actions">
+            <button class="ghost-button" id="recheckBackend" type="button">接続再確認</button>
+            <button class="ghost-button" id="preciseAnalyze" type="button" disabled>精密解析</button>
+            <button class="ghost-button" id="exportMp3" type="button" disabled>MP3コピー</button>
+          </div>
+          <dl class="precise-grid">
+            <div>
+              <dt>FFmpeg LUFS</dt>
+              <dd id="preciseLufs">--</dd>
+            </div>
+            <div>
+              <dt>FFmpeg True Peak</dt>
+              <dd id="preciseTruePeak">--</dd>
+            </div>
+            <div>
+              <dt>LRA</dt>
+              <dd id="preciseLra">--</dd>
+            </div>
+          </dl>
+          <p class="export-note" id="backendNote">WAVがマスター用。MP3は共有やSNS投稿のための圧縮コピーです。</p>
+        </div>
+      </section>
+
+      <section class="export-band" aria-label="書き出し">
+        <div class="export-options">
+          <label>
+            <span>Master WAV</span>
+            <select id="bitDepth" disabled>
+              <option value="24" selected>24 bit 推奨</option>
+              <option value="16">16 bit 互換</option>
+            </select>
+          </label>
+          <button class="secondary-button" id="exportWav" type="button" disabled>WAVを書き出し</button>
+        </div>
+        <p class="export-note" id="exportNote">最終保存はWAV推奨。MP3は必要なときだけ精密エンジン側から作れます。</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

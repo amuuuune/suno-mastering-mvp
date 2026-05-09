@@ -1,0 +1,199 @@
+C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py:4: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+  import cgi
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py:4: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+  import cgi
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "POST /api/analyze HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py:4: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+  import cgi
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 58632)
+Traceback (most recent call last):
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py", line 195, in __init__
+    super().__init__(*args, directory=str(ROOT), **kwargs)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 671, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py", line 219, in do_GET
+    json_response(
+  File "C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py", line 74, in json_response
+    handler.wfile.write(body)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 834, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] 確立された接続がホスト コンピューターのソウトウェアによって中止されました。
+----------------------------------------
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 50634)
+Traceback (most recent call last):
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py", line 195, in __init__
+    super().__init__(*args, directory=str(ROOT), **kwargs)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 671, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py", line 219, in do_GET
+    json_response(
+  File "C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py", line 74, in json_response
+    handler.wfile.write(body)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 834, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] 確立された接続がホスト コンピューターのソウトウェアによって中止されました。
+----------------------------------------
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /?v=1778295839922 HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py:4: DeprecationWarning: 'cgi' is deprecated and slated for removal in Python 3.13
+  import cgi
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 57193)
+Traceback (most recent call last):
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py", line 195, in __init__
+    super().__init__(*args, directory=str(ROOT), **kwargs)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 671, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py", line 219, in do_GET
+    json_response(
+  File "C:\Users\kande\Documents\New project\suno-mastering-mvp\backend\server.py", line 74, in json_response
+    handler.wfile.write(body)
+  File "C:\Users\kande\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 834, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] 確立された接続がホスト コンピューターのソウトウェアによって中止されました。
+----------------------------------------
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /styles.css HTTP/1.1" 200 -
+[server] 127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+[server] 127.0.0.1 - code 404, message File not found
+[server] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+[server] 127.0.0.1 - "GET /api/health HTTP/1.1" 200 -
